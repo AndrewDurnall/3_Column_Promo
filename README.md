@@ -7,7 +7,7 @@ The XD file is an interactive prototype which was built first and then I constru
 
 
 Technologies used:
-CSS - LESS
-Adobe XD
-HTML5
-JavaScipt
+CSS - LESS,
+Adobe XD,
+HTML5,
+JavaScipt,
