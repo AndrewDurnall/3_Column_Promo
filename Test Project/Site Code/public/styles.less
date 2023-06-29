@@ -1,0 +1,227 @@
+// vairables
+@main-background: #161616;
+@box-background:#DADADA;
+@gibson: #ec8d11;
+@prs: #7d4996;
+@fender: #da1515;
+@text-colour: #000000;
+@cta_colour1:#618926;
+@cta_colour2:#465f97;
+@btn_text:#FFFFFF;
+@list_font:'New Rocker', cursive;
+@main_heading_font:'Lobster', cursive;
+@main_paragraph_font:'Libre Baskerville', serif;
+
+//mixins
+.border-radius(@radius: 20px) {
+	-webkit-border-radius:	@radius;
+	-moz-border-radius:	    @radius;
+	border-radius:		    @radius;
+};
+
+/*Animation for fading in*/
+/* taken from https://daneden.github.io/animate.css/ */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  .animate__fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+  }
+
+/*Animation for fading in up*/
+/* taken from https://daneden.github.io/animate.css/ */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 4%, 0);
+        transform: translate3d(0, 4%, 0);
+    }
+  
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    }
+.animate__fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+  }
+
+
+/* mobile phone settings */
+
+//main site div
+.main{
+    background-color: @main-background;
+    min-width: 360px;
+    margin: 0 auto;
+    animation-name: fadeIn;
+    animation-delay: 0.1s;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-play-state: running;
+}
+//site title
+.main__title{
+    font-size: 4em;
+    color: @btn_text;
+    text-align: center;
+    font-family: @main_heading_font;
+    margin: 10px 0px 20px 0px;
+}
+// style for the cards
+.card{
+    height: auto;
+    background-color: @box-background;
+    padding: 5px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    .border-radius;
+}
+//style for the paragraphs in the cards
+.card__paragraph{
+    font-family: @main_paragraph_font;
+    color: @text-colour;
+    margin: 10px 0px 10px 5px;
+    font-size: 0.9em;
+    min-height: 120px;
+
+}
+//choosing the colour of the borders of each card by nth of type.
+.card:nth-of-type(1){
+    border: solid @prs 8px;
+    animation-name: fadeInUp;
+    animation-delay: 0.6s;
+    animation-duration: 0.8s;
+    animation-fill-mode: both;
+    animation-play-state: running;
+}
+
+.card:nth-of-type(2){
+    border: solid @gibson 8px;
+    animation-name: fadeInUp;
+    animation-delay: 0.9s;
+    animation-duration: 0.8s;
+    animation-fill-mode: both;
+    animation-play-state: running;
+}
+
+.card:nth-of-type(3){
+    border: solid @fender 8px;
+    animation-name: fadeInUp;
+    animation-delay: 1.2s;
+    animation-duration: 0.8s;
+    animation-fill-mode: both;
+    animation-play-state: running;
+}
+
+//call to action div style
+.card__action{
+    padding: 10px 0px 0px 0px ;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+//style of the actual clickable call to action
+a.card__actionbtn { 
+    width: 100px; 
+    padding: 10px 25px 10px 25px; 
+    font-family: @list_font; 
+    font-size: 16px; 
+    text-decoration: none; 
+    color: @btn_text; 
+    text-shadow: -1px -1px 2px @cta_colour1; 
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0, #84a336),color-stop(.35, #abca4f),color-stop(1, #567a20)); 
+    border: 1px solid darken(@cta_colour1, 20%); border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; 
+} 
+//hover value for the call to action
+a.card__actionbtn:hover { 
+    text-shadow: -1px -1px 2px @cta_colour2; 
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0, #2b5ea5),color-stop(.35, #3760b1),color-stop(1, #173374)); 
+    border: 1px solid darken(@cta_colour2, 20%); 
+}
+//icon style for the icon inside the call to action
+.card__btnicon{
+    height: auto;
+    width: 95px;
+}
+//style for the ul in the cards
+.card__list{
+    color: @text-colour;
+    padding: 0px 0px 0px 5px;
+    margin: 0;
+    font-size: 0.9em;
+    list-style-type: none;
+}
+//style for the list items in the cards
+.card__list__item{
+    font-size: 1.3em;
+    font-family: @list_font;
+}
+//style of each of the cards titles
+.card__title{
+    text-align: center;
+    padding: 0;
+    margin: 0px 0px 10px 0px;
+    display: block;
+    font-family: @main_heading_font;
+}
+//style for the image on the cards
+.photo__img{
+    display: block;
+    height: auto;
+    width: 97.5%;
+    border: solid 5px @main-background;
+    .border-radius(25px);
+}
+//style for the toggle button
+.card__action__toggle{
+    display: flex;
+    flex-direction: column;
+    font-family: @list_font;
+    padding:5px 5px 17px 5px;
+    animation-name: fadeInUp;
+    animation-delay: 1.8s;
+    animation-duration: 0.8s;
+    animation-fill-mode: both;
+    animation-play-state: running;
+}
+//style for the toggle button icon
+.card__action__toggle__icon{
+    width: 50px;
+    height: auto;
+    align-self: center;
+}
+
+/* pc desktop settings */
+@media only screen and (min-width:450px){
+
+    //style for pc main site size
+.main{
+    min-width: 1200px;
+}
+//style to make 3 cards into 3 columns on desktop pc
+.main__container{
+    max-width: 1200px;
+    min-width: 321px;
+    margin: 0 auto;
+    display: flex;
+}
+//stlye for the cards on desktop pc
+.card{
+    width: 99%;
+    min-width: 321px;
+    margin: 0px 10px 0px 10px;
+}
+
+}

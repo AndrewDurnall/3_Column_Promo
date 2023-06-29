@@ -1,0 +1,181 @@
+/*Animation for fading in*/
+/* taken from https://daneden.github.io/animate.css/ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.animate__fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+/*Animation for fading in up*/
+/* taken from https://daneden.github.io/animate.css/ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 4%, 0);
+    transform: translate3d(0, 4%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+/* mobile phone settings */
+.main {
+  background-color: #161616;
+  min-width: 360px;
+  margin: 0 auto;
+  animation-name: fadeIn;
+  animation-delay: 0.1s;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-play-state: running;
+}
+.main__title {
+  font-size: 4em;
+  color: #FFFFFF;
+  text-align: center;
+  font-family: 'Lobster', cursive;
+  margin: 10px 0px 20px 0px;
+}
+.card {
+  height: auto;
+  background-color: #DADADA;
+  padding: 5px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+.card__paragraph {
+  font-family: 'Libre Baskerville', serif;
+  color: #000000;
+  margin: 10px 0px 10px 5px;
+  font-size: 0.9em;
+  min-height: 120px;
+}
+.card:nth-of-type(1) {
+  border: solid #7d4996 8px;
+  animation-name: fadeInUp;
+  animation-delay: 0.6s;
+  animation-duration: 0.8s;
+  animation-fill-mode: both;
+  animation-play-state: running;
+}
+.card:nth-of-type(2) {
+  border: solid #ec8d11 8px;
+  animation-name: fadeInUp;
+  animation-delay: 0.9s;
+  animation-duration: 0.8s;
+  animation-fill-mode: both;
+  animation-play-state: running;
+}
+.card:nth-of-type(3) {
+  border: solid #da1515 8px;
+  animation-name: fadeInUp;
+  animation-delay: 1.2s;
+  animation-duration: 0.8s;
+  animation-fill-mode: both;
+  animation-play-state: running;
+}
+.card__action {
+  padding: 10px 0px 0px 0px ;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+a.card__actionbtn {
+  width: 100px;
+  padding: 10px 25px 10px 25px;
+  font-family: 'New Rocker', cursive;
+  font-size: 16px;
+  text-decoration: none;
+  color: #FFFFFF;
+  text-shadow: -1px -1px 2px #618926;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #84a336), color-stop(0.35, #abca4f), color-stop(1, #567a20));
+  border: 1px solid #283910;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+a.card__actionbtn:hover {
+  text-shadow: -1px -1px 2px #465f97;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #2b5ea5), color-stop(0.35, #3760b1), color-stop(1, #173374));
+  border: 1px solid #263351;
+}
+.card__btnicon {
+  height: auto;
+  width: 95px;
+}
+.card__list {
+  color: #000000;
+  padding: 0px 0px 0px 5px;
+  margin: 0;
+  font-size: 0.9em;
+  list-style-type: none;
+}
+.card__list__item {
+  font-size: 1.3em;
+  font-family: 'New Rocker', cursive;
+}
+.card__title {
+  text-align: center;
+  padding: 0;
+  margin: 0px 0px 10px 0px;
+  display: block;
+  font-family: 'Lobster', cursive;
+}
+.photo__img {
+  display: block;
+  height: auto;
+  width: 97.5%;
+  border: solid 5px #161616;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+}
+.card__action__toggle {
+  display: flex;
+  flex-direction: column;
+  font-family: 'New Rocker', cursive;
+  padding: 5px 5px 17px 5px;
+  animation-name: fadeInUp;
+  animation-delay: 1.8s;
+  animation-duration: 0.8s;
+  animation-fill-mode: both;
+  animation-play-state: running;
+}
+.card__action__toggle__icon {
+  width: 50px;
+  height: auto;
+  align-self: center;
+}
+/* pc desktop settings */
+@media only screen and (min-width: 450px) {
+  .main {
+    min-width: 1200px;
+  }
+  .main__container {
+    max-width: 1200px;
+    min-width: 321px;
+    margin: 0 auto;
+    display: flex;
+  }
+  .card {
+    width: 99%;
+    min-width: 321px;
+    margin: 0px 10px 0px 10px;
+  }
+}
